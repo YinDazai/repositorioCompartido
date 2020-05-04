@@ -1,0 +1,41 @@
+-----------------------------------------
+SUBIR PROYECTO A REPOSITORIO BITBUCKET
+-----------------------------------------
+
+1 - Crear cuenta en Bitbucket
+	https://bitbucket.org/
+	"create a new repositorio"
+	Privado
+	Control de versiones tipo: Git
+	Issue tracking (opcional)
+	
+	Obtenemos la url de mi repositorio
+	
+3 - Instalar git 
+	https://git-scm.com/downloads
+	
+2 - Comandos MSDos
+	Subir código al repositorio:
+	Me meto en mi carpeta proyecto
+	
+	#Comando "git init" para inicializar el proyecto como un proyecto de Git.
+	> git init
+	
+	#Vamos a decirle que ficheros del proyecto forman parte del repositorio, es decir los que queramos subir. Normalmente sólo código fuente.
+	# Le decimos al proyecto que almacene la carpeta src donde está el código.
+	> git add src
+	
+	#Para ver el estado del proyecto, nos indica que partes está listas para ser validadas (commit) y que ficheros no están registrados, es decir partes del proyecto que no van a subir al repositorio 
+	> git status
+	
+	#Validamos los cambios, la opción -m para añadir un mensaje
+	> git commit -m "Commit inicial"
+	
+	#Ahora vamos a subir los cambios. Como el repositorio es nuevo tenemos que identificar con que repositorio de bitbucket tenemos que vincular este código. Lo hacemos indicando la url con la que queremos vincular este proyecto.
+	> git remote add origin https://www.bitbucket.org/miProyecto... 
+	
+	#subimos el código al repositorio con el comando push y le indicamos que lo queremos subir a la rama master (rama principal del proyecto)
+	> git push origin master
+	
+	#NOs pedirá que nos validemos con el usuario/password de bitbucket ya que hemos dicho que era un proyecto privado y ya con eso tendríamos subido nuestro código al repositorio.
+	
